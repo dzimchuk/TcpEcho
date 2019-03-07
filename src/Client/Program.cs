@@ -33,6 +33,9 @@ namespace TcpEcho
             else
             {
                 var count = int.Parse(messageSize);
+
+                Console.WriteLine($"Message size: {count}");
+
                 var buffer = Encoding.ASCII.GetBytes(new string('a', count) + Environment.NewLine);
                 var stopwatch = new Stopwatch();
                 stopwatch.Start();
